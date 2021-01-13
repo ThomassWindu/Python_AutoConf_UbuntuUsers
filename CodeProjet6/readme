@@ -1,0 +1,8 @@
+Ce projet comporte deux programme python3.9
+
+Dans le dossier VersionAjoutListeUtilisateurs, un readme est présent.
+Ce programme permet l'ajout d'une liste d'utilisateurs vers une liste de postes distants
+
+Dans le dossier VersionGenerique, un readme est présent aussi.
+Ce programme est légerement différent car il permet d'executer un bash de votre choix vers les postes distants
+Il est donc plus générique.
