@@ -1,0 +1,19 @@
+#!/bin/bash
+# se connecte en ssh pour verifier les utilisateurs avec un cat /etc/passwd
+# il faut absolument un nom d'utilisateur et ip ou dns pour le ssh et son mot de passe pour utiliser le sudo ( le mot de passe n'est pas demandé pour la connexion ssh )
+#
+checkUserBySSH()
+{
+echo
+centreTexteEtCouleurs "${blu}Connexion SSH vers ${hoteSSH}pour afficher la liste des utilisateurs" "${cyn}="
+#
+if [ ${#nomUserSSH} = 0 ] || [ ${#hoteSSH} = 0 ]
+then
+echoRouge "Il manque au moins un des parametres obligatoire pour la connexion SSH."
+else
+ssh ${nomUserSSH}@${hoteSSH} << eof
+cat /etc/passwd | awk -F: '{print $ 1}'
+exit
+eof
+fi
+}

@@ -1,0 +1,3 @@
+grn=$'\e[1;32m' #${grn}
+echo "${grn}Les variables d'environnement"
+printenv

@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#------ Importation des fonctions---------
+. ../Bash/fonctions/bashCentreTexteEtCouleurs
+#
+#------ Les variables---------------------
+# elles sont vides pour le moment et seront modifier par le programme python.
+nomUserSSH=""
+hoteSSH=""
+mdpUserSSH=""
+#
+# ----------- main -----------
+centreTexteEtCouleurs "${blu}Connexion SSH vers ${hoteSSH} pour reboot" "${cyn}="
+#
+echoRouge "${nomUserSSH}  ${hoteSSH}  ${mdpUserSSH}"
+if [ ${#nomUserSSH} = 0 ] || [ ${#hoteSSH} = 0 ] || [ ${#mdpUserSSH} = 0 ]
+then
+echoRouge "Il manque au moins un des parametres obligatoire pour la connexion SSH."
+else
+ssh ${nomUserSSH}@${hoteSSH} << eof
+sudo -S reboot
+${mdpUserSSH}
+eof
+fi

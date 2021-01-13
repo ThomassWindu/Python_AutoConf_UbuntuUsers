@@ -1,0 +1,22 @@
+#!/bin/bash
+#rappel des couleurs disponibles   ${red} ${grn} ${yel} ${blu} ${mag} ${cyn} ${end}
+. ../Bash/FonctionsBashCentreTexteetCouleurs/bashCentreTexteEtCouleurs
+echoJaune "Jaune"
+echoRouge "Suis je bien rouge?"
+echoBleu "Bleu"
+echoVert "Vert"
+echo "${red}--- ${grn}--- ${yel}--- ${blu}--- ${mag}--- ${cyn}---${end}"
+sleep 1
+centreTexteEtCouleurs "Centre en rouge" "~" 4 ${red}
+centreTexteEtCouleurs "Centre sans couleurs" "~" 4
+centreTexteEtCouleurs "Centre uniquement"
+centreTexteEtCouleurs "${red}Rouge ${grn}Vert ${yel}Jaune " "${cyn}-"
+#
+# ATTENTION AU ${end} lors d'une utilisation des couleurs, la derniere couleur utilisé reste active pour les echos suivant.
+# Si vous travaillez avec un fond de console blanc, il faut modifier la couleur de ${end} en noir.
+# Exemple concret:
+echo "echo simple sans couleur"
+echo "${red}J'ai mis du rouge et oublié le end"
+echo "echo simple sans couleur, a la fin du script les couleurs sont de nouveau par défaut${end}"
+
+

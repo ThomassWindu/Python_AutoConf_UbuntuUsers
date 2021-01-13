@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#------ Importation des fonctions---------
+. ../Bash/fonctions/bashCentreTexteEtCouleurs
+. ../Bash/fonctions/checkUsersSSH
+#
+#------ Les variables---------------------
+# elles sont vides pour le moment et seront modifier par le programme python.
+nomUserSSH=""
+hoteSSH=""
+mdpUserSSH=""
+#
+# ----------- main -----------
+#Le scrip python remplacera suivant le choix de l'utilisateur XXX1Commande par addUserBySSH ou delUserBySSH
+
+checkUserBySSH
+

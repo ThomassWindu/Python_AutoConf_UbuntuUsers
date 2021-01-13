@@ -1,0 +1,40 @@
+Ce script est développé sur python3.9
+
+Commande pour installer les paquets necessaires
+
+$sudo apt-get install python3.9 python3-tk
+
+Cette version générique permet tout simplement d'exécuter un script bash vers toutes les machines de la liste
+
+Pas besoin de clé ssh car les informations pour la connexion SSH est dans la liste que vous devez remplir, si vous avez une paire clé, le mot de passe sera interprété comme une commande.
+(Ce n'est cependant pas bloquant sauf si le mot de passe est une commande...)
+
+On peut directement entrer des commandes sudo sans se préocuper du mot de passe, le mot de passe ne sera pas demandé car nous l'avons déja saisie lors de la premiere commande ( sudo -S echo)
+la premiere ligne #!/bin/bash n'est pas à saisir ( au pire elle sera lu comme un simple commentaire)
+
+
+Pour une bonne utilisation il vous faut les acces ssh vers un compte sudo dans le fichier <listePostesDistants>
+Le programme se lance directement avec une boite de dialogue pour chercher le fichier comportant vos commandes bash.
+
+Vous pouvez double cliquer et executer dans un terminal pour lancer le programme
+
+
+En résumé le bash qui sera executé sur toute les machines sera déja pré-remplie et il y sera incorporé dedans votre bash comme ci-dessous:
+
+
+#!/bin/bash
+
+variables
+#
+ssh login@hote << eof
+mdp
+sudo -S echo
+mdp
+votreBash |
+votreBash |
+votreBash |----------> votre bash est donc incorporé ici,l'indentation est possible car même
+votreBash |			   si << eof nécessite aucune indentation
+votreBash |			   , vous pouvez tout de même en faire car elles seront
+ 					   supprimées par le script python.
+etc..
+eof

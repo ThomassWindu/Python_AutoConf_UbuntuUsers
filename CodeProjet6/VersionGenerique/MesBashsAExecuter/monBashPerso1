@@ -1,0 +1,8 @@
+#!/bin/bash
+#variable
+red=$'\e[1;31m' #${red}
+grn=$'\e[1;32m' #${grn}
+end=$'\e[0m'    #${end}  --> retour a la couleur blanche
+#
+echo "${red}Un echo basique${end}"
+sudo echo "${grn}Un echo avec droit superutilisateur${end}"

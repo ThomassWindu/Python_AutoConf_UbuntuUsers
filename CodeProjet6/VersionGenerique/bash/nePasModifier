@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#------ Importation des fonctions---------
+. bash/fonctions/bashCentreTexteEtCouleurs
+#
+#------ Les variables---------------------
+# elles sont vides pour le moment et seront modifier par le programme python.
+nomUserSSH=""
+hoteSSH=""
+mdpUserSSH=""
+#
+# ----------- main -----------
+centreTexteEtCouleurs "${blu}Connexion SSH vers ${nomUserSSH}@${hoteSSH} pour excution du script" "${cyn}="
+#
+if [ ${#nomUserSSH} = 0 ] || [ ${#hoteSSH} = 0 ] || [ ${#mdpUserSSH} = 0 ]
+then
+echoRouge "Il manque au moins un des parametres obligatoire pour la connexion SSH."
+echoRouge "Vérifier le fichier listePostesDistants et que le séparateur est bien ;"
+else
+ssh ${nomUserSSH}@${hoteSSH} << eof
+${mdpUserSSH}
+sudo -S echo
+${mdpUserSSH}
+XXXmonBashXXX
+eof
+fi

@@ -1,0 +1,24 @@
+#!/bin/bash
+# se connecte en ssh pour supprimer un utilisateur
+# il faut absolument un nom d'utilisateur et ip ou dns pour le ssh et son mot de passe pour utiliser le sudo ( le mot de passe n'est pas demandé pour la connexion ssh )
+#le nom de l'user a creer et son mdp a minima (nom complet, num bureau,tel pro,tel perso et autre sont optionnel)
+#
+#
+delUserBySSH()
+{
+echo
+centreTexteEtCouleurs "${blu}Connexion SSH vers ${hoteSSH} pour suppression de l'utilisateur ${nomNewUser}" "${cyn}="
+#
+if [ ${#nomUserSSH} = 0 ] || [ ${#hoteSSH} = 0 ] || [ ${#nomNewUser} = 0 ] || [ ${#nomNewUser} = 0 ] || [ ${#nomNewUser} = 0 ]
+then
+echoRouge "Il manque au moins un des parametres obligatoire pour l'ajout d'un utilisateur."
+else
+ssh ${nomUserSSH}@${hoteSSH} << eof
+sudo -S deluser ${nomNewUser}
+${mdpUserSSH}
+sudo rm -Rf /home/${nomNewUser}
+echo
+exit
+eof
+fi
+}
