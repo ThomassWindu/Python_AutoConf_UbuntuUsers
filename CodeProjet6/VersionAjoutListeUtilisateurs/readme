@@ -1,0 +1,35 @@
+Ce script est développé sur python3.9 et sur un system Linux ( Lubuntu20.04)
+
+Commande pour installer les paquets necessaires
+
+$sudo apt-get install python3.9
+
+Objectif du programme:
+
+Il y a deux listes csv:
+listeUtilisateurs contient la liste des utilisateurs que l'on souhaite ajouter sur les postes distants
+listePostesDistants comporte la liste des postes distant
+
+Le programme va donc via SSH ajouter tout les utilisateurs de la liste "listeUtilisateurs" vers tout les postes distant de l'autre liste "listePostesDistantsé".
+
+Utilisation du programme:
+
+Vous devez donc préalablement remplir à votre guise ces deux liste puis executer "UseBashInPython" qui se trouve dans le repertoire "Python"
+
+il faut lancez le programme via un terminal afin de pouvoir interagir avec et voir le retour de l'execution.
+Ouvre un terminal, faites cd jusqu'a l'emplacement de "UseBashInPython" et faites la commande:
+python3.9 UseBashInPython
+
+Vous aurez alors quatre choix.
+un pour ajouter les utilisateurs vers les postes distants
+un pour supprimer les utilisateurs des postes distants
+un pour redemarrer les postes distant
+et le dernier pour quitter le programme
+
+Explication pour modification et exploitation du code:
+
+Le code Python et Bash sont séparés dans deux repertoires.
+Le code principal est donc UseBashInPython.
+Python va donc lire les fichiers bash qui se trouve dans  Bash/main puis les modifier et executer
+Pour alléger les fichiers bash que doit lire le programme, les fonctions bash sont dans un autre repertoire.
+
