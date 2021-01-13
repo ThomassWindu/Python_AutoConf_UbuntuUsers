@@ -1,26 +1,26 @@
 Ce script est développé sur python3.9 et sur un system Linux ( Lubuntu20.04)
 
-Commande pour installer les paquets necessaires
+Commande pour installer les paquets necessaires:
 
 $sudo apt-get install python3.9
 
 Objectif du programme:
 
 Il y a deux listes csv:
-listeUtilisateurs contient la liste des utilisateurs que l'on souhaite ajouter sur les postes distants
-listePostesDistants comporte la liste des postes distant
+"listeUtilisateurs" contient la liste des utilisateurs que l'on souhaite ajouter sur les postes distants
+"listePostesDistants" comporte la liste des postes distants
 
-Le programme va donc via SSH ajouter tout les utilisateurs de la liste "listeUtilisateurs" vers tout les postes distant de l'autre liste "listePostesDistantsé".
+Le programme va donc via SSH ajouter tout les utilisateurs de la liste "listeUtilisateurs" vers tout les postes distants de l'autre liste "listePostesDistants".
 
 Utilisation du programme:
 
-Vous devez donc préalablement remplir à votre guise ces deux liste puis executer "UseBashInPython" qui se trouve dans le repertoire "Python"
+Vous devez donc préalablement remplir à votre guise ces deux listes puis executer "UseBashInPython" qui se trouve dans le repertoire "Python"
 
 il faut lancez le programme via un terminal afin de pouvoir interagir avec et voir le retour de l'execution.
-Ouvre un terminal, faites cd jusqu'a l'emplacement de "UseBashInPython" et faites la commande:
-python3.9 UseBashInPython
+Ouvrez un terminal, faites cd jusqu'a l'emplacement de "UseBashInPython" et faites la commande:
+$python3.9 UseBashInPython
 
-Vous aurez alors quatre choix.
+Vous aurez alors quatres choix.
 un pour ajouter les utilisateurs vers les postes distants
 un pour supprimer les utilisateurs des postes distants
 un pour redemarrer les postes distant
@@ -28,8 +28,18 @@ et le dernier pour quitter le programme
 
 Explication pour modification et exploitation du code:
 
-Le code Python et Bash sont séparés dans deux repertoires.
-Le code principal est donc UseBashInPython.
-Python va donc lire les fichiers bash qui se trouve dans  Bash/main puis les modifier et executer
+Le code Python et les scripts Bash sont séparés dans deux repertoires.
+Le code principal est donc UseBashInPython du répertoire Python.
+Python va donc lire les fichiers bash qui se trouve dans  Bash/main puis les modifier et les executer.
 Pour alléger les fichiers bash que doit lire le programme, les fonctions bash sont dans un autre repertoire.
+Le code est suffisement commenté pour le reprendre. Vous pouvez commencer par lire "UseBashInPython" et lire les autres fichiers lors de leurs appels.
+Dans le dossier Bash/main, les scripts sont donc lu par python et les variables sont donc vides pour être renseignés par le programme python.
+Les commandes encadrées par XXX (XXXmaCommandeXXX) ne sont pas des commandes bash.
+
+Le programme dans le repertoire "VersionGenerique" est plus concis et plus simple.
+En effet il s'agit d'une evolution de ce programme pour une adaptation plus générique et plus personalisable.
+Il n'est en revanche pas possible dans la version générique d'ajouter une liste d'utilisateur sans devoir modifier le code source.
+
+A terme, nous pouvons inclure la possibilité de lancer un bash personnalisable en prenant en compte une liste d'utilisateurs.
+
 
