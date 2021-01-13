@@ -1,22 +1,24 @@
-Ce script est développé sur python3.9
+Ce script est développé sur python3.9 et pour une utilisation sur un systeme Linux
 
 Commande pour installer les paquets necessaires
 
 $sudo apt-get install python3.9 python3-tk
 
-Cette version générique permet tout simplement d'exécuter un script bash vers toutes les machines de la liste
+Cette version générique permet tout simplement d'exécuter un script bash vers toutes les machines de la liste "listePostesDistants". Ce fichier ne doit pas être renommé ni deplacé.
+Cette liste comporte une ligne pour le nommage des colonnes et peut être modifié par un tableur. Les séparateurs de données acceptés sont ";" "," et ":".
 
 Pas besoin de clé ssh car les informations pour la connexion SSH est dans la liste que vous devez remplir, si vous avez une paire clé, le mot de passe sera interprété comme une commande.
 (Ce n'est cependant pas bloquant sauf si le mot de passe est une commande...)
 
-On peut directement entrer des commandes sudo sans se préocuper du mot de passe, le mot de passe ne sera pas demandé car nous l'avons déja saisie lors de la premiere commande ( sudo -S echo)
+On peut directement entrer des commandes sudo dans votre bash sans se préocuper du mot de passe, le mot de passe ne sera pas demandé car nous l'avons déja saisie lors de la premiere commande ( sudo -S echo)
 la premiere ligne #!/bin/bash n'est pas à saisir ( au pire elle sera lu comme un simple commentaire)
 
 
-Pour une bonne utilisation il vous faut les acces ssh vers un compte sudo dans le fichier <listePostesDistants>
+Il vous faut les acces ssh vers un compte sudo dans le fichier <listePostesDistants> pour utilisation optimale du programme.
 Le programme se lance directement avec une boite de dialogue pour chercher le fichier comportant vos commandes bash.
 
-Vous pouvez double cliquer et executer dans un terminal pour lancer le programme
+
+Pour lancer le programme, double cliquez sur "executezMoi.py" et cliquez sur "executer dans un terminal" (Testé sur Lubuntu20.4)
 
 
 En résumé le bash qui sera executé sur toute les machines sera déja pré-remplie et il y sera incorporé dedans votre bash comme ci-dessous:
