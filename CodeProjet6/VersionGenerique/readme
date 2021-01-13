@@ -17,6 +17,9 @@ la premiere ligne #!/bin/bash n'est pas à saisir ( au pire elle sera lu comme u
 Il vous faut les acces ssh vers un compte sudo dans le fichier <listePostesDistants> pour utilisation optimale du programme.
 Le programme se lance directement avec une boite de dialogue pour chercher le fichier comportant vos commandes bash.
 
+Dans le repertoire "MesBashsAExecuter" se trouve quelques exemple de bash à executer vers les postes distant de la liste.
+il y a un bash qui effectue un reboot, un bash pour effectuer un echo, et un bash pour voir les variables d'environnement
+
 
 Pour lancer le programme, double cliquez sur "executezMoi.py" et cliquez sur "executer dans un terminal" (Testé sur Lubuntu20.4)
 
