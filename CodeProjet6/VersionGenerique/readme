@@ -44,19 +44,19 @@ votreBash |			   , vous pouvez tout de même en faire car elles seront
 etc..
 eof
 
-#Programme executant un script bash vers différents poste d'une liste en SSH.
+#
+#    Programme executant un script bash vers différents poste d'une liste en SSH. Il est découpé en plusieurs fichiers
 #    Copyright (C) 2021 Fay Thomas
 #
 #   Ce programme est un logiciel libre: vous pouvez le redistribuer et / ou le modifier
 #    sous les termes de la licence publique générale GNU publiée par
-#    la Free Software Foundation, soit la version 3 de la licence, soit
-#   (à votre choix) toute version ultérieure.
+#    la Free Software Foundation, soit la version 3 de la licence ou ulterieur.
 #
 #    Ce programme est distribué dans l'espoir qu'il sera utile,
 #    mais SANS AUCUNE GARANTIE; sans même la garantie implicite de
 #    QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
 #    GNU General Public License pour plus de détails.
 #
-#    Lience disponible à la racine du projet.
+#    Licence disponible à la racine du projet.
 #    Vous devriez avoir reçu une copie de la licence publique générale GNU
 #    avec ce programme. Sinon, consultez <https://www.gnu.org/licenses/>.
