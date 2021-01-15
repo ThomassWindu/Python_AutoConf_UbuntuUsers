@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!
+#   Ce fichier n'est pas utilisé dans le programme, il sert juste d'exemple pour l'utilisation de la fonction du fichier "bashCentreTexteEtCouleurs"
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
 #rappel des couleurs disponibles   ${red} ${grn} ${yel} ${blu} ${mag} ${cyn} ${end}
 . ../Bash/FonctionsBashCentreTexteetCouleurs/bashCentreTexteEtCouleurs
 echoJaune "Jaune"
@@ -18,5 +23,22 @@ centreTexteEtCouleurs "${red}Rouge ${grn}Vert ${yel}Jaune " "${cyn}-"
 echo "echo simple sans couleur"
 echo "${red}J'ai mis du rouge et oublié le end"
 echo "echo simple sans couleur, a la fin du script les couleurs sont de nouveau par défaut${end}"
+
+#
+#    Programme permetant l'ajout d'utilisateur via une liste vers des postes d'une autre liste en SSH. Il est découpé en plusieurs fichiers
+#    Copyright (C) 2021 Fay Thomas
+#
+#   Ce programme est un logiciel libre: vous pouvez le redistribuer et / ou le modifier
+#    sous les termes de la licence publique générale GNU publiée par
+#    la Free Software Foundation, soit la version 3 de la licence ou ulterieur.
+#
+#    Ce programme est distribué dans l'espoir qu'il sera utile,
+#    mais SANS AUCUNE GARANTIE; sans même la garantie implicite de
+#    QUALITÉ MARCHANDE ou ADAPTATION À UN USAGE PARTICULIER. Voir le
+#    GNU General Public License pour plus de détails.
+#
+#    Licence disponible à la racine du projet.
+#    Vous devriez avoir reçu une copie de la licence publique générale GNU
+#    avec ce programme. Sinon, consultez <https://www.gnu.org/licenses/>.
 
 
